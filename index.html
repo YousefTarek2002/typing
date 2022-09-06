@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/fir.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>typing test speed</h2>
+
+        <div class="content" id="fir-cont">
+            <lord-icon src="https://cdn.lordicon.com/shiwicyv.json" trigger="morph"
+                colors="primary:#4bb3fd,secondary:#ffc738,tertiary:#ebe6ef">
+            </lord-icon>
+            <p class="play-now"> Choose the level for typing </p>
+            <hr style=" border: 5px solid rgb(36, 163, 138);
+            border-radius: 5px;">
+            <div class="buttons">
+                <button class=" play-ch left" id="easy">Easy</button>
+                <button class=" play-ch mx-auto" id="medium">Medium</button>
+                <button class=" play-ch right" id="hard">Hard</button>
+            </div>
+        </div>
+
+        <div class="content hide" id="main-cont">
+            <p class="word"></p>
+            <div class="details">
+                <p class="score">Score: <span></span></p>
+                <p class="time">Time Left: <span><b>0</b>s</span></p>
+            </div>
+            <input type="text" spellcheck="false" placeholder="Enter a valid word">
+            <div class="buttons">
+
+                <button class="check-word">Check Word</button>
+                <button class="end">End</button>
+            </div>
+            <div class="message hide">
+                <p class="message-show"></p>
+            </div>
+        </div>
+        <div class="content endPage hide" id="cont">
+            <lord-icon src="https://cdn.lordicon.com/tqywkdcz.json" trigger="loop"
+                colors="primary:#4bb3fd,secondary:#f28ba8,tertiary:#ffc738,quaternary:#f24c00"
+                style="width:180px;height:180px">
+            </lord-icon>
+            <p class="f-score">Your Score is : <span></span></p>
+            <p class="play-now">Click play to play again</p>
+            <div class="buttons">
+
+                <button class=" play mx-auto" id="play-again">Play Again
+                    <lord-icon src="https://cdn.lordicon.com/nrvilcob.json" trigger="loop"
+                        colors="primary:#3a3347,secondary:#f24c00,tertiary:#646e78" style="width:50px;height:50px">
+                    </lord-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/word.js"></script>
+    <script src="js/fir.js"></script>
+
+</body>
+
+</html>

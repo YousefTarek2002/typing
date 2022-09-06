@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400");
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:300,400,500");
+
+:root {
+  --header-height: 3rem;
+
+  --hue: 231;
+  /*========== Colors ==========*/
+  --main-color: hsl(var(--hue), 25%, 11%);
+  --fir-color: hsl(var(--hue), 24%, 25%);
+  --sec-color: rgb(211, 79, 79);
+  --thi-color: rgb(67, 91, 175);
+  --fou-color: rgb(255, 160, 122);
+  --fiv-color: rgb(36, 163, 138);
+
+  --whi-color: #fff;
+  --gray-color: #6C757D;
+  --container-color: #251634;
+
+  --title-color: hsl(var(--hue)00, 8%, 15%);
+  --text-color: hsl(var(--hue), 8%, 45%);
+  --text-color-light: hsl(var(--hue), 8%, 65%);
+  --input-color: hsl(var(--hue), 70%, 96%);
+
+
+  /*========== Transition Time ==========*/
+  --main-tra: .3s ease-in-out;
+  --sec-tra: .5s ease-in-out;
+  --active-tra: .98s ease-in-out;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Montserrat', sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --bigger-size: 2.5rem;
+  --big-size: 2rem;
+  --h1-size: 1.5rem;
+  --h2-size: 1.25rem;
+  --h3-size: 1.125rem;
+  --normal-size: .938rem;
+  --small-size: .813rem;
+  --smaller-size: .75rem;
+  --smallest-size: .6rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi: 600;
+
+  /*========== Margins Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --bigger-size: 3rem;
+    --big-size: 2.5rem;
+    --h1-size: 2.25rem;
+    --h2-size: 1.5rem;
+    --h3-size: 1.25rem;
+    --normal-size: 1rem;
+    --small-size: .875rem;
+    --smaller-size: .813rem;
+  }
+}
+
+/* Color Codes
+ #131521
+ #181A26
+ #1D2031
+ #457174
+ #7C1A41
+ #0B94CB
+ #1EB1DA
+ #CD3463
+ #AA1545
+ #2B45FC
+ #141720
+ #CB2458
+ #FD2741
+ */
+
+/* ======================= */
+/* ======================= */
+
+/*
+   * Scroll color
+   */
+
+body::-webkit-scrollbar {
+  width: 13px;
+  background-color: var(--whi-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 0 0 10px 10px;
+}
+
+/* ======================= */
+/*==================== BASE ====================*/
+/* ======================= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: var(--body-font);
+  margin: 0 0 var(--header-height) 0;
+  font-size: var(--normal-size);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+ * Selection color
+ */
+::-moz-selection {
+  background-color: var(--main-color);
+  color: var(--whi-color);
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: var(--whi-color);
+}
+
+.hide {
+  display: none !important;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section-title {
+  font-size: var(--h1-size);
+  color: var(--title-color);
+}
+
+.section-subtitle {
+  display: block;
+  font-size: var(--small-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section-title,
+.section-subtitle {
+  text-align: center;
+}
+
+/*==================== LAYOUT ====================*/
+.container {
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--main-color);
+}
+
+.nav {
+  max-width: 968px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  position: fixed;
+  bottom: 50%;
+  left: 0%;
+  width: 80%;
+  background-color: var(--fir-color);
+  padding: 2rem 1.5rem 4rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  transition: var(--main-tra);
+}
+
+.nav-list {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.nav-item {
+  letter-spacing: .5rem;
+}
+
+/*==================== BUTTONS ====================*/
+.button {
+  display: inline-block;
+  background-color: var(--fir-color);
+  color: var(--main-color);
+  padding: 1rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  letter-spacing: 1.5px;
+  transition: var(--main-tra);
+  border: 2px solid var(--fir-color);
+}
+
+.button:hover {
+  color: var(--fir-color);
+  font-weight: var(--font-semi);
+  box-shadow: inset 0 0 0 2.5em var(--whi-color);
+}
+
+.button-icon {
+  font-size: 1.3rem;
+  margin-left: var(--mb-0-5);
+  transition: var(--main-tra);
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button-small {
+  padding: .75rem 1rem;
+  border: none
+}
+
+.button-link {
+  padding: 0;
+  background-color: transparent;
+  color: var(--fir-color);
+}
+
+.button-white {
+  background-color: #fff;
+  color: var(--fir-color);
+  transition: var(--main-tra);
+  border: none;
+}
+
+.button-white:hover {
+  /* background-color: #fff; */
+  color: #fff;
+  box-shadow: inset 0 0 0 2.5em var(--fir-color);
+}
+
+.button-link:hover {
+  background-color: transparent;
+  color: var(--fir-color-alt);
+}
+
+.button-contact:hover .button-icon,
+.button:hover .button-icon {
+  transform: translateX(.25rem);
+}
+
+.button-down {
+  transition: var(--main-tra);
+}
+
+.button-down:hover {
+  transform: scale(1.06);
+}
+
+.button-social {
+  font-size: 1.6rem;
+  margin-right: var(--mb-1-5);
+  border: 2px solid var(--main-color);
+  border-radius: 25px;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  transition: var(--main-tra);
+  padding: 5px;
+}
+
+.button-social:hover {
+  border-radius: 5px;
+  transform: scale(1.2);
+}

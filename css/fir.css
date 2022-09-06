@@ -1,0 +1,210 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body{
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--main-color);
+}
+.container{
+  width: 440px;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+.container h2{
+  font-size: 25px;
+  font-weight: 500;
+  padding: 16px 25px;
+  border-bottom: 1px solid #ccc;
+}
+.container .content{
+  margin: 25px 20px 35px;
+}
+.endPage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.endPage lord-icon {
+  align-self: center;
+}
+.endPage .play {
+  padding: 5px !important;
+  height: 70px;
+}
+.endPage .f-score {
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.content .word{
+  user-select: none;
+  font-size: 33px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 10px;
+  margin-right: -24px;
+  word-break: break-all;
+  text-transform: uppercase;
+}
+#fir-cont > lord-icon {
+  position: relative;
+  top: 50%;
+  left: 49%;
+  transform: translate(-50%, 0%);
+  width:200px;
+  height:200px;
+}
+.message-show{
+  user-select: none;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 30px;
+  text-transform: uppercase;
+  background: var(--sec-color);
+  padding: 10px;
+  color: var(--whi-color);
+}
+.content .details{
+  margin: 25px 0 20px;
+}
+.details p{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.details p b{
+  font-weight: 500;
+}
+.content input{
+  width: 100%;
+  height: 60px;
+  outline: none;
+  padding: 0 16px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  letter-spacing: 1.7px;
+}
+.content input:focus{
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+}
+.content input::placeholder{
+  color: #aaa;
+}
+.content input:focus::placeholder{
+  color: #bfbfbf;
+}
+.content .buttons{
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.buttons button{
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 0;
+  font-size: 17px;
+  border-radius: 5px;
+  width: calc(100% / 2 - 8px);
+  transition: all 0.3s ease;
+}
+.buttons button:active{
+  transform: scale(0.97);
+}
+.buttons .refresh-word{
+  background: #6C757D;
+}
+.buttons .refresh-word:hover{
+  background: #5f666d;
+}
+.buttons .check-word{
+  background: #5372F0;
+}
+.buttons .check-word:hover{
+  background: #2c52ed;
+}
+.buttons .end {
+  background: var(--sec-color);
+}
+.buttons .end:hover {
+  background: var(--main-color);
+}
+
+.play-now {
+  user-select: none;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background: var(--fiv-color);
+  padding: 10px;
+  color: var(--whi-color);
+  animation: loops .5s infinite;
+}
+
+.choose {
+  padding: 5px;
+  background: var(--whi-color);
+  color: var(--thi-color);
+  font-weight: bold;
+  margin-top: 0px;
+}
+.play,
+.play-ch {
+  background: var(--sec-color);
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+.left {
+  margin-right: 10px;
+  background: var(--fou-color);
+}
+.right {
+  margin-left: 10px;
+  background: var(--thi-color);
+}
+.play:hover,
+.play-ch:hover {
+  background: var(--fiv-color);
+}
+.play-ch {
+  width: calc(100% / 3) !important;
+}
+
+@media screen and (max-width: 470px) {
+  .container h2{
+    font-size: 22px;
+    padding: 13px 20px;
+  }
+  .content .word{
+    font-size: 30px;
+    letter-spacing: 20px;
+    margin-right: -20px;
+  }
+  .container .content{
+    margin: 20px 20px 30px;
+  }
+  .details p{
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .content input{
+    height: 55px;
+    font-size: 17px;
+  }
+  .buttons button{
+    padding: 14px 0;
+    font-size: 16px;
+    width: calc(100% / 2 - 7px);
+  }
+}
